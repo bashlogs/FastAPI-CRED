@@ -2,14 +2,15 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 import urllib.parse
+import os
+import urllib.parse
 
-username = 'YOUR_USERNAME'
-password = 'YOUR_PASSWORD'
-hostname = 'YOUR_HOST_NAME'
-port = '5432'
-database_name = 'python_db'
+username = os.environ.get('DB_USERNAME')
+password = os.environ.get('DB_PASSWORD')
+hostname = os.environ.get('DB_HOSTNAME')
+port = os.environ.get('DB_PORT')
+database_name = os.environ.get('DB_DATABASE_NAME')
 quoted_password = urllib.parse.quote_plus(password)
-
 DATABASE_URL = f'postgresql://{username}:{quoted_password}@{hostname}:{port}/{database_name}'
 
 # For local postgresql server

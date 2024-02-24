@@ -37,3 +37,16 @@ Run the project
 ```bash
 uvicorn main:app --reload
 ```
+
+Docker Run command
+```bash
+docker pull bashlogs/fastapi
+
+docker run -d -p 8000:8000 `
+ -e DB_USERNAME=YOUR_USERNAME `
+ -e DB_PASSWORD=YOUR_PASSWORD `
+ -e DB_HOSTNAME=YOUR_HOST_NAME `
+ -e DB_PORT=5432 `
+ -e DB_DATABASE_NAME='python_db' bashlogs/fastapi:1.0
+ ```
+
