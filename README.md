@@ -35,6 +35,7 @@ Base = declarative_base()
 Run the project
 
 ```bash
+cd app
 uvicorn main:app --reload
 ```
 
@@ -49,4 +50,10 @@ docker run -d -p 8000:8000 `
  -e DB_PORT=5432 `
  -e DB_DATABASE_NAME='python_db' bashlogs/fastapi:1.0
  ```
+
+Images
+
+![image](https://github.com/bashlogs/FastAPI-CRED/assets/102829101/dbb92c43-9a1f-4df7-8817-16f29eea193d)
+
+![image](https://github.com/bashlogs/FastAPI-CRED/assets/102829101/1bb080c9-f4df-4867-b225-ad204d071d42)
 
